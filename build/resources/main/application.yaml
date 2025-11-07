@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: soa_service_b
+
+  r2dbc:
+    enabled: false
+  data:
+    r2dbc:
+      repositories:
+        enabled: false
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfiguration
+      - org.springdoc.webmvc.ui.SwaggerConfig
+
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework: INFO
+    application: DEBUG
+
+
+service:
+  a:
+    base-url: ${SERVICE_A_URL:https://service-a:8443}
+
