@@ -14,7 +14,7 @@ public class WebClientConfig {
         this.baseUrl = baseUrl;
     }
 
-    @Bean
+    @Bean("serviceAClient")
     public WebClient serviceAClient() {
         return WebClient.builder()
                 .baseUrl(baseUrl)

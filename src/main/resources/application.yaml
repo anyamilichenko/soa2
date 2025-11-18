@@ -27,5 +27,5 @@ logging:
 
 service:
   a:
-    base-url: ${SERVICE_A_URL:https://service-a:8443}
+    base-url: http://localhost:8080
 
