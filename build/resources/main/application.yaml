@@ -1,31 +1,32 @@
+server:
+  ssl:
+    enabled:
+      false
+    key-store: classpath:keystore/service-b.p12
 spring:
+
   application:
     name: soa_service_b
 
   r2dbc:
     enabled: false
+
   data:
     r2dbc:
       repositories:
         enabled: false
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
-      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration
-      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfiguration
-      - org.springdoc.webmvc.ui.SwaggerConfig
 
-
-server:
-  port: 8081
-
-logging:
-  level:
-    org.springframework: INFO
-    application: DEBUG
-
+#  autoconfigure:
+#    exclude:
+#      - org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+#      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration
+#      - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfiguration
+#      - org.springdoc.webmvc.ui.SwaggerConfig
+#      - org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+#      # Отключаем автоконфигурации встроенного веб-сервера (ВАЖНО!)
+#      - org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+#      - org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
 
 service:
   a:
-    base-url: http://localhost:8080
-
+    base-url: https://localhost:8218
