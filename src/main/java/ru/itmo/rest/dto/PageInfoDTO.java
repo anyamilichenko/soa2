@@ -1,4 +1,4 @@
-package directory.adapter.rest.dto;
+package ru.itmo.rest.dto;
 
 class PageInfoDTO {
     private final int page;

@@ -1,4 +1,4 @@
-package directory.adapter.rest.dto;
+package ru.itmo.rest.dto;
 
 public class PaginatedDragonsResponse {
     private final java.util.List<DragonResponseDTO> items;

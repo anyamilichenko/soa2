@@ -1,17 +1,17 @@
-package directory.adapter.rest;
-
-import directory.adapter.rest.dto.*;
+package ru.itmo.rest;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
+import ru.itmo.rest.dto.DragonResponseDTO;
+import ru.itmo.rest.dto.PaginatedDragonsResponse;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/killer")
+//@RequestMapping("/killer")
 public class DirectoryController {
 
 
@@ -19,6 +19,11 @@ public class DirectoryController {
 
     public DirectoryController(@Qualifier("serviceAClient") WebClient serviceAClient) {
         this.serviceAClient = serviceAClient;
+    }
+
+    @GetMapping("/")
+    public String test(){
+        return "Hello";
     }
 
     @GetMapping("/dragon/find-by-cave-depth/{max}")
