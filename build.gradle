@@ -21,9 +21,9 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
-//            {
-//        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-//    }
+            {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

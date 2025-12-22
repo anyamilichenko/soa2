@@ -1,10 +1,23 @@
 server:
   ssl:
-    enabled:
-      false
-    key-store: classpath:keystore/service-b.p12
-spring:
+    enabled: false
+#    key-store: classpath:service-b.p12
+#    key-store: src/main/resources/keystore/service-b.p12
+#    key-store-password: secret123
+#    key-alias: service-b
+  sni-host-check: false
 
+client:
+  ssl:
+    key-store: classpath:service-b.p12
+    key-store-password: secret123
+    key-store-type: PKCS12
+    trust-store: classpath:service-b-truststore.p12
+    trust-store-password: secret123
+    trust-store-type: PKCS12
+    enabled: false
+
+spring:
   application:
     name: soa_service_b
 

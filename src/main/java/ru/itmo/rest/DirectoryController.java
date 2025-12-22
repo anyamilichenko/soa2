@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-//@RequestMapping("/killer")
+@RequestMapping("/killer")
 public class DirectoryController {
 
 
